@@ -13,6 +13,7 @@ public class WrapperPractice {
 	private void IntegerTest() {
 		// TODO Auto-generated method stub
 		int i=10 ;
+		int x=10;
 	}
 	
 	
