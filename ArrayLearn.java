@@ -7,11 +7,11 @@ public class ArrayLearn {
 	int n ;
 	 public static void main(String[] args) {
 		 ArrayLearn a  = new ArrayLearn();
-		// a.InputToArray();
-		// a.DisplayArray();
+		 a.InputToArray();
+		 a.DisplayArray();
 		 
 		// a.DisplayArray1();
-		 a.FindMax();
+		 //a.FindMax();
 	}
 	 
 	 private void FindMax() {
@@ -100,6 +100,7 @@ public class ArrayLearn {
 	private void DisplayArray() {
 		// TODO Auto-generated method stub
 		
+		
 		int i=0,tot=0;
 		for(i=n-1; i>=0;i--) {
 			 	
@@ -113,6 +114,7 @@ public class ArrayLearn {
 		System.out.println(" Total      : "+tot);
 		System.out.println(" Avg        : "+tot/5);
 		System.out.println(" Percentage : "+(tot/500.0)*100);
+		System.out.printf("\n Grade     :%c",tot>200?'A':'B');
 	}
 	
 
