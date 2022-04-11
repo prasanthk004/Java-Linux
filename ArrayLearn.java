@@ -7,14 +7,113 @@ public class ArrayLearn {
 	int n ;
 	 public static void main(String[] args) {
 		 ArrayLearn a  = new ArrayLearn();
-		 a.InputToArray();
-		 a.DisplayArray();
-		 
+		// a.InputToArray();
+		// a.DisplayArray();
+		 //a.Sort();	
+		// a.Seraching();
+		 a.BinarySearch();
 		// a.DisplayArray1();
 		 //a.FindMax();
 	}
 	 
-	 private void FindMax() {
+	 private void BinarySearch() {
+		// TODO Auto-generated method stub
+		 int[] ar = {10,20,30,35,42,57, 68,78, 79, 83, 99,100};
+			//
+	int key = 68; 
+	int min =0,max =11;
+	int mid=0 ;
+	while(mid<max){
+	  mid = (min+max)/2;	//5
+	if(key == ar[mid])
+	{System.out.println("Yes, key is present at "+ mid); 
+	break; 
+	}
+	else if(key<ar[mid])
+	{
+	max = mid-1; 
+	}
+	else if(key>ar[mid]){
+	min = mid+1;
+	}
+	} 
+	
+	if(mid>max)
+	{
+		System.out.println(" Unable to find the given number "+key);
+	}
+	
+	
+	}
+	 
+	
+
+	private void Seraching() {
+		// TODO Auto-generated method stub
+	    char[] c = {'a','c','d','x'};
+	    
+	    int i ;
+	    int found=0 ;
+	    char ch;
+	    Scanner sc=new Scanner(System.in);
+	    System.out.print(" Enter the char to find : ");
+	    ch=sc.next().charAt(0);
+	    
+	    for(  i=0;i<c.length;i++)
+	    {
+	    	if(c[i]==ch)
+	    	{
+	    		found=1;
+	    		System.out.println("Character "+ch+" Present in pos "+i);
+	    	}
+	    }
+	    
+	    if(found==0)
+	    {
+	    	System.out.println(" Unable to find the character ");
+	    }
+	}
+
+	private void Sort() {
+		// TODO Auto-generated method stub
+		 int[] ar = {5,8,11,15}; 
+		 int temp=0; 
+
+		 int j ;
+		 
+		 for(j=0;j<ar.length;j++)
+		 {
+			 for(int i=0;i<ar.length-1; i++)
+			 {
+			 if(ar[i]<ar[i+1])
+			 {
+			 temp = ar[i]; 
+			 ar[i] = ar[i+1]; 
+			 ar[i+1] = temp; 		 		
+			 }
+			 }
+			 
+		 }
+		 
+		 
+		 
+		 for( j=0;j<ar.length;j++)
+		 {
+			
+		 System.out.println(ar[j]);
+		 }
+		   
+		
+		
+		
+		  
+		
+	}
+	
+	
+	
+
+	private void FindMax() {
 			// TODO Auto-generated method stub
 			int[] marks= {5,80,45,80,5};
 			
@@ -96,6 +195,8 @@ public class ArrayLearn {
 		}
 		
 	}
+	
+	
 
 	private void DisplayArray() {
 		// TODO Auto-generated method stub
@@ -109,6 +210,8 @@ public class ArrayLearn {
 		 
 			
 		}
+		
+		
 		 
 		System.out.printf("\n\n");
 		System.out.println(" Total      : "+tot);
