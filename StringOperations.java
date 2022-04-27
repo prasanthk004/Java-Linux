@@ -25,7 +25,7 @@ public class StringOperations {
 
 	private void FindCharFreq() {
 		// TODO Auto-generated method stub
-		String name = "vinodhini"; 
+		String name = "PRasanth K"; 
 		int len = name.length(); 
 		int[] freq = new int[len]; 
 		int j =0; 
@@ -50,7 +50,7 @@ public class StringOperations {
 		}
 		for(int i=0;i<freq.length;i++)
 		{
-	    if(freq[i]!=-5)
+	    if(freq[i]>0)
 	System.out.println(name.charAt(i) + "--> "+freq[i]);
 		} 
 	}
